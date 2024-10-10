@@ -9,6 +9,6 @@ namespace zd1
     public interface IStudent
     {
         double CalculateAverageGrade(); // Метод для вычисления среднего баллa
-        string GetCourseInfo();         // Метод для получения информации о курсе
+        string GetCourseInfo();        // Метод для получения информации о курсе
     }
 }

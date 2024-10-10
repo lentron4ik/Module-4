@@ -15,14 +15,30 @@
             <ComboBox x:Name="CourseComboBox" Width="200" Margin="0,0,0,10">
                 <ComboBoxItem Content="Первый курс" />
                 <ComboBoxItem Content="Второй курс" />
+                <ComboBoxItem Content="Третий курс" />
+                <ComboBoxItem Content="Четвёртый курс" />
             </ComboBox>
 
             <TextBlock Text="Оценки (через запятую)" />
             <TextBox x:Name="GradesTextBox" Width="200" Margin="0,0,0,10" />
 
-            <Button Content="Добавить студента" Click="AddStudentButton_Click" Width="200" />
+            <!-- Кнопки для управления -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="262">
+                <Button Content="Добавить студента" Click="AddStudentButton_Click" Width="126" Margin="0,0,10,0" />
+                <Button x:Name="DeleteStudentBtn" Content="Удалить студента" Click="DeleteStudentBtn_Click" Width="126" />
+            </StackPanel>
 
-            <ListBox x:Name="StudentListBox" Margin="0,20,0,0" Height="150" SelectionChanged="StudentListBox_SelectionChanged" />
+            <!-- Таблица для отображения студентов -->
+            <ListView x:Name="StudentListView" Margin="0,20,0,0" Height="200">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ФИО" Width="120" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Курс" Width="120" DisplayMemberBinding="{Binding Course}" />
+                        <GridViewColumn Header="Оценки" Width="120" DisplayMemberBinding="{Binding Grades}" />
+                        <GridViewColumn Header="Средний балл" Width="120" DisplayMemberBinding="{Binding AverageGrade}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
 
             <TextBlock x:Name="StudentInfoTextBlock" FontWeight="Bold" />
         </StackPanel>

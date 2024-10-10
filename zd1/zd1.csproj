@@ -55,9 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FourthYearStudent.cs" />
     <Compile Include="SecondYearStudent .cs" />
     <Compile Include="FirstYearStudent.cs" />
     <Compile Include="IStudent.cs" />
+    <Compile Include="StudentViewModel.cs" />
+    <Compile Include="ThirdYearStudent .cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
