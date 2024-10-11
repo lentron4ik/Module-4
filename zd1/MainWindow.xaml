@@ -29,7 +29,7 @@
             </StackPanel>
 
             <!-- Таблица для отображения студентов -->
-            <ListView x:Name="StudentListView" Margin="0,20,0,0" Height="200">
+            <ListView x:Name="StudentListView" Margin="0,20,0,0" Height="100">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ФИО" Width="120" DisplayMemberBinding="{Binding Name}" />

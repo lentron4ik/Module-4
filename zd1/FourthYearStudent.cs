@@ -9,7 +9,7 @@ namespace zd1
     public class FourthYearStudent : IStudent
     {
         private string Name { get; }
-        private List<double> Grades { get; }
+        private List<double> Grades { get; set; }
 
         public FourthYearStudent(string name, List<double> grades)
         {
@@ -31,5 +31,6 @@ namespace zd1
         {
             return $"{Name} (4 курс)";
         }
+
     }
 }

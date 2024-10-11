@@ -76,9 +76,6 @@ namespace zd1
             }
         }
 
-
-
-
         // Метод для парсинга оценок из строки
         private List<double> ParseGrades(string gradesText)
         {
@@ -105,5 +102,6 @@ namespace zd1
                 StudentListView.Items.RemoveAt(StudentListView.SelectedIndex);
             }
         }
+
     }
 }
